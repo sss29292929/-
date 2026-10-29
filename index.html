@@ -13,14 +13,16 @@ html
 </head>
 <body>
 
-    <div class="box" onclick="openTarget()">
-        <span>匿名検索</span>
+    <div class="box" onclick="openViaGoogle()">
+        <span>匿名検索(G)</span>
     </div>
 
     <script>
-        function openTarget() {
-            var secret = "aHR0cHM6Ly93d3cuc3RhcnRwYWdlLmNvbS8=";
-            window.open(atob(secret), '_blank');
+        function openViaGoogle() {
+            // Google翻訳の「ウェブサイト丸ごと翻訳機能」を使ってStartpageを呼び出します
+            // 英語から日本語に翻訳する設定（sl=en, tl=ja）にしています
+            var proxyUrl = "https://translate.goog";
+            window.open(proxyUrl, '_blank');
         }
     </script>
 
